@@ -1,0 +1,86 @@
+@import url("../../App.css");
+
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-background-color);
+  height: 5%;
+  max-height: 20px;
+  padding: 1rem;
+  border-bottom: 2px solid var(--background-color);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.TopBarLinkContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.TopBarLink {
+  margin: 12px;
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.TopBarLink:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.TopBarName {
+  color: var(--primary-color);
+}
+
+.NavToggle {
+  display: none;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .TopBarLinkContainer {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-color);
+  }
+  .TopBarName {
+    font-size: 24px;
+  }
+
+  .TopBarLinkContainer.Open {
+    display: flex;
+    padding: 0 2rem;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    margin-top: 270px;
+    box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+
+  .TopBarLinkContainer a {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .TopBarLinkContainer a {
+    font-size: 24px;
+  }
+
+  .NavToggle {
+    display: block;
+    margin-right: 3rem;
+  }
+}

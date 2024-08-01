@@ -1,0 +1,149 @@
+.PersonalProfileContainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--dark-background-color);
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  border-radius: 30px;
+  margin-bottom: 4rem;
+}
+
+.LeftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  width: 60%;
+  padding: 0.6rem 0.6rem;
+}
+
+.RightColumn {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.NameContainer {
+  width: fit-content;
+}
+
+.ImageContainer {
+  overflow: hidden;
+  padding: 15px;
+  width: 28vw;
+  height: 28vw;
+}
+
+.ImageContainer img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.LeftColumn h3 {
+  font-size: 2vw;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.LeftColumn p {
+  font-size: 1.25vw;
+}
+
+.ResumeLink {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5vw;
+  margin-top: auto;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.SocialIconContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: 2%;
+}
+
+.LocationText {
+  color: var(--primary-color);
+  font-size: 1.5vw;
+  margin-top: -10px;
+}
+
+/* adapted from: https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.NameHeaderText {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--primary-color); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3s steps(25, end), blink-caret 0.75s step-end infinite;
+  width: 100%;
+  font-size: 3.5vw;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+  .LeftColumn h3 {
+    font-size: 1.3rem;
+  }
+  .ResumeLink {
+    font-size: 1.2rem;
+  }
+
+  .LeftColumn p {
+    font-size: 1rem;
+  }
+
+  .LocationText {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .PersonalProfileContainer {
+    width: 95%;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .PersonalProfileContainer {
+    width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .PersonalProfileContainer {
+    padding: 1.5rem;
+  }
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-color);
+  }
+}
